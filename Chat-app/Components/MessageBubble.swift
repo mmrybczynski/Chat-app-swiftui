@@ -8,11 +8,21 @@
 import SwiftUI
 
 struct MessageBubble: View {
+    var message: Message
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(alignment: message.recived ? .leading : .trailing) {
+            HStack {
+                Text(message.Text)
+                    .padding()
+                    .background(message.recived ? Color("Gray") : Color("Green"))
+                    .cornerRadius(30)
+            }
+            .frame(maxWidth: .infinity, alignment: message.recived ? .leading : .trailing)
+        }
+        .padding(.horizontal, 10)
     }
 }
 
 #Preview {
-    MessageBubble()
+    MessageBubble(message: Message(id: "1", Text: "Hello, my name is Mateusz.", recived: false, timestamp: Date()))
 }
