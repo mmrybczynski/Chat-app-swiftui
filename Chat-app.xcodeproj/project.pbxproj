@@ -53,6 +53,7 @@
 		C198881B2B0021B60093A00C /* Chat-app */ = {
 			isa = PBXGroup;
 			children = (
+				C198882D2B02D53D0093A00C /* Models */,
 				C198882A2B0022E60093A00C /* Components */,
 				C198881C2B0021B60093A00C /* Chat_appApp.swift */,
 				C198881E2B0021B60093A00C /* ContentView.swift */,
@@ -76,6 +77,13 @@
 				C198882B2B0023010093A00C /* TitleRow.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		C198882D2B02D53D0093A00C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
