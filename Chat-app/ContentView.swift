@@ -8,10 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    var messageArray: [String] = ["Hello", "Hi", "What are you doing?", "I am programming new chat app"]
     var body: some View {
         VStack {
             TitleRow()
-            Spacer()
+            ScrollView {
+                ForEach(messageArray, id: \.self) { text in
+                      MessageBubble(message: Message(id: "1", Text: text, recived: true, timestamp: Date()))
+                }
+            }
         }
     }
 }
