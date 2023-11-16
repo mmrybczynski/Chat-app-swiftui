@@ -20,7 +20,7 @@ struct MessageBubble: View {
             HStack {
                 Text(message.Text)
                     .padding()
-                    .background(message.recived ? Color("Gray") : Color("Green"))
+                    .background(message.recived ? Color("LightGray") : Color("Green"))
                     .cornerRadius(30)
             }
             .frame(maxWidth: .infinity, alignment: message.recived ? .leading : .trailing)
@@ -33,5 +33,5 @@ struct MessageBubble: View {
 }
 
 #Preview {
-    MessageBubble(message: Message(id: "1", Text: "Hello, my name is Mateusz.", recived: false, timestamp: Date()))
+    MessageBubble(message: Message(id: "1", Text: "Hello, my name is Mateusz.", recived: true, timestamp: Date()))
 }
